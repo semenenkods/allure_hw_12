@@ -2,6 +2,7 @@ package allure;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.*;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -12,13 +13,19 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.linkText;
 
-public class StepsTest {
+public class AllureLambdaTest {
 
     private static final String REPOSITORY = "semenenkods/allure_hw_12";
     private static final int ISSUE = 1;
 
     @Test
-    @DisplayName("Search of issue in the repository")
+    @Feature("Issue in repository")
+    @Story("Create an issue")
+    @Owner("semenenkods")
+    @Severity(SeverityLevel.BLOCKER)
+    @Link(value = "Testing", url = "https://testing.github.com")
+    @DisplayName("Searching for an issue in the repository")
+
     public void testLambdaStep() {
 
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -41,7 +48,6 @@ public class StepsTest {
         step("Verify if issue with number " + ISSUE + "exist", () -> {
             $(withText("#" + ISSUE)).should(Condition.exist);
         });
-
 
 
     }
