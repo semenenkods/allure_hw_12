@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","7002","testAnnotatedStep()","","Mon Feb 03 01:04:37 GMT 2025","passed","Mon Feb 03 01:04:44 GMT 2025","","allure.AllureStepsTest","allure.AllureStepsTest","testAnnotatedStep"
+"","6707","Searching for an issue in the repository","","Mon Feb 03 01:04:31 GMT 2025","passed","Mon Feb 03 01:04:37 GMT 2025","","allure.AllureSelenideTest","allure.AllureSelenideTest","testIssueSearch"
+"","9445","Searching for an issue in the repository","","Mon Feb 03 01:04:21 GMT 2025","passed","Mon Feb 03 01:04:31 GMT 2025","","allure.AllureLambdaTest","allure.AllureLambdaTest","testLambdaStep"
